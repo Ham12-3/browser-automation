@@ -1,0 +1,2 @@
+"""OmniBrowse local agent package."""
+
