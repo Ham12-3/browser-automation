@@ -1,0 +1,10 @@
+{
+  "name": "com.omnibrowse.agent",
+  "description": "OmniBrowse local native messaging host",
+  "path": "python",
+  "type": "stdio",
+  "allowed_extensions": [
+    "omnibrowse-agent@example.local"
+  ]
+}
+

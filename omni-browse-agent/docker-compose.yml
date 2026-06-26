@@ -1,0 +1,9 @@
+services:
+  local-agent:
+    build:
+      context: ./local-agent
+    command: uvicorn app.main:app --host 127.0.0.1 --port 8765
+    network_mode: host
+    volumes:
+      - ./local-agent/data:/app/data
+

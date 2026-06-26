@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "OmniBrowse Agent Bridge",
+  "version": "0.1.0",
+  "description": "Visible, permission-based bridge between the active tab and the local OmniBrowse agent.",
+  "permissions": ["activeTab", "scripting", "nativeMessaging", "storage"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*"],
+  "action": {
+    "default_title": "OmniBrowse",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
